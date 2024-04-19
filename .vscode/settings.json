@@ -1,15 +1,23 @@
 {
     // "python.analysis.extraPaths": ["./src"],
     "python.analysis.autoImportCompletions": true,
-    "python.analysis.typeCheckingMode": "basic",
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "file",
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": true,
-        "files.trimTrailingWhitespace": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always",
+            "source.fixAll": "never",
+        },
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": false,
+        "editor.tabSize": 4,
     },
-    "vim.smartRelativeLine": true,
+    "black-formatter.args": [
+        "--line-length",
+        "89",
+    ],
+    "python.analysis.typeCheckingMode": "standard",
+    "python.analysis.extraPaths": [],    
     "workbench.colorCustomizations": {
         "titleBar.activeBackground": "#38329A"
     }
